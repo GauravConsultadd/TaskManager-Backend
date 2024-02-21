@@ -28,13 +28,5 @@ pipeline {
                 }
             }
         }
-        
-        stage('Deploy') {
-            steps {
-                // You can deploy to your desired environment here
-                // For example, copy files to a server, deploy to Azure, etc.
-                // This step depends on your deployment strategy.
-            }
-        }
     }
 }
