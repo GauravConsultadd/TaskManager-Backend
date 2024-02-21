@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Clean and build the ASP.NET Core application
-                    bat 'dotnet build TaskManager.csproj --configuration Release'
+                    sh 'dotnet build TaskManager.csproj --configuration Release'
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Run tests if needed
-                    bat 'dotnet test TaskManager.Tests.csproj --configuration Release'
+                    sh 'dotnet test TaskManager.Tests.csproj --configuration Release'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Publish the ASP.NET Core application
-                    bat 'dotnet publish TaskManager.csproj --configuration Release --output publish_output'
+                    sh 'dotnet publish TaskManager.csproj --configuration Release --output publish_output'
                 }
             }
         }
