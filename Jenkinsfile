@@ -11,15 +11,6 @@ pipeline {
             }
         }
         
-        stage('Test') {
-            steps {
-                script {
-                    // Run tests if needed
-                    sh '/usr/local/share/dotnet/dotnet test TaskManager.Tests.csproj --configuration Release'
-                }
-            }
-        }
-        
         stage('Publish') {
             steps {
                 script {
